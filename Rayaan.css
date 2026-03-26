@@ -1,9 +1,9 @@
 :root {
-    --bg-dark: #Of172a;
+    --bg-dark: #0f172a;
     --bg-card: #1e293b;
-    --text-main: #f1f5f9;
+    --text-main: #93b3c1 ;
     --accent: #ec3750 ;
-    --accent-glow: rgba(236. 55, 80, 0.2);
+    --accent-glow: rgba(236, 55, 80, 0.2);
 }
 * {
     margin: 0;
@@ -15,6 +15,7 @@ body{
     background-color:var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
+    font-weight: bold;
 }
 .container {
     max-width: 900px;
@@ -80,4 +81,56 @@ h1{
 .primary-btn:hover {
     background:var(--accent);
     color: white ;
+    box-shadow: 0 0 15px var(--accent-glow);
 }
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color:var(--text-main);
+}
+.card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    border:1px solid #334155
+}
+.project-grid {
+        display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                }
+                .project-card {
+                    background: var(--bg-card);
+                        padding: 25px;
+                            border-radius: 10px;
+                                border-bottom: 4px solid var(--accent);
+                                    transition: transform 0.3s;
+                                    }
+                                    .project-card:hover {
+                                        transform: translateY(-5px);
+                                        }
+                                        .project-tag {
+                                            font-size: 0.7rem;
+                                                color: var(--accent);
+                                                    text-transform: uppercase;
+                                                        margin-bottom: 10px;
+                                                        }
+                                                        .project-link {
+                                                            display: inline-block;
+                                                                margin-top: 15px;
+                                                                    color: var(--text-main);
+                                                                        text-decoration: none;
+                                                                            font-weight: bold;
+                                                                            }
+                                                                            footer {
+                                                                                text-align: center;
+                                                                                    padding: 50px 0;
+                                                                                        color: var(--text-dim);
+                                                                                            font-size: 0.8rem;
+                                                                                            }
+                                                                                            @media (max-width: 600px) {
+                                                                                                h1 { font-size: 2.5rem; }
+                                                                                                    nav { padding: 20px; }
+                                                                                                        .nav-links { display: none; }
+                                                                                                        }
+
